@@ -1,6 +1,3 @@
-/* ==============================
-   VARIÁVEIS
-============================== */
 :root {
   --rose: #f0b5b6;
   --teal: #87cfc3;
@@ -15,9 +12,6 @@
   --white: #ffffff;
 }
 
-/* ==============================
-   RESET & BASE
-============================== */
 * {
   box-sizing: border-box;
 }
@@ -37,7 +31,6 @@ h1,
 h2,
 h3,
 h4,
-.brand-text p,
 .chip,
 .btn {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -58,9 +51,7 @@ button {
   padding: 0 24px;
 }
 
-/* ==============================
-   LOADER
-============================== */
+/* LOADER */
 .hidden-on-load {
   opacity: 0;
   transition: opacity .7s ease;
@@ -112,48 +103,28 @@ button {
 }
 
 @keyframes splashPop {
-  0%   { opacity: 0; transform: scale(0.4) rotate(-20deg); }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); }
-}
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(-20deg);
+  }
 
-@keyframes splashLine {
-  from { width: 0; }
-  to   { width: 200px; }
-}
-
-.loader-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.loader-inner p {
-  margin: 0;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.loader-ring {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: var(--teal);
-  border-right-color: var(--rose);
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
   }
 }
 
-/* ==============================
-   BARRA DE PROGRESSO
-============================== */
+@keyframes splashLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 200px;
+  }
+}
+
+/* BARRA DE PROGRESSO */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -166,9 +137,7 @@ button {
   box-shadow: 0 0 8px rgba(135, 207, 195, .4);
 }
 
-/* ==============================
-   HEADER
-============================== */
+/* HEADER */
 .site-header {
   position: fixed;
   top: 0;
@@ -209,15 +178,12 @@ button {
   border-radius: 0 !important;
   padding: 0 !important;
   cursor: pointer;
-  text-align: left;
 }
 
 .brand-logo-img {
   display: flex;
   align-items: center;
   height: 92px;
-  border: none !important;
-  background: transparent !important;
   transition: height .3s ease;
 }
 
@@ -241,9 +207,7 @@ button {
   height: 72px;
 }
 
-/* ==============================
-   NAVEGAÇÃO
-============================== */
+/* NAV */
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -276,7 +240,6 @@ button {
   box-shadow: 0 6px 22px rgba(240, 181, 182, .55);
 }
 
-/* HAMBURGUER */
 .menu-btn {
   display: none;
   flex-direction: column;
@@ -312,7 +275,6 @@ button {
   background: var(--teal);
 }
 
-/* OVERLAY */
 .mobile-overlay {
   position: fixed;
   inset: 0;
@@ -329,7 +291,6 @@ button {
   visibility: visible;
 }
 
-/* DRAWER MOBILE */
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -357,7 +318,6 @@ button {
   align-items: flex-start;
   height: 100%;
   padding: 40px 36px;
-  gap: 0;
 }
 
 .mobile-nav-logo {
@@ -523,9 +483,7 @@ button {
   animation: drawerSlideIn .4s cubic-bezier(.22, 1, .36, 1) .62s forwards;
 }
 
-/* ==============================
-   BOTÕES
-============================== */
+/* BOTÕES */
 .btn {
   border: 0;
   cursor: pointer;
@@ -558,9 +516,7 @@ button {
   backdrop-filter: blur(4px);
 }
 
-/* ==============================
-   CHIPS
-============================== */
+/* CHIPS */
 .chip {
   display: inline-block;
   padding: 8px 13px;
@@ -591,15 +547,25 @@ button {
   border: none;
 }
 
-/* ==============================
-   HERO
-============================== */
+/* HERO */
 .hero {
   min-height: 100vh;
   position: relative;
   display: grid;
   align-items: center;
   overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(10, 10, 10, .6) 60%, #0d0d0d 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .hero-bg {
@@ -883,19 +849,9 @@ button {
   }
 }
 
-/* ==============================
-   SEÇÕES
-============================== */
+/* SEÇÕES */
 .section {
   padding: 96px 0;
-}
-
-.section-white {
-  background: #fff;
-}
-
-.section-soft {
-  background: rgba(239, 235, 235, .45);
 }
 
 .section-gradient {
@@ -918,9 +874,11 @@ button {
   max-width: 640px;
 }
 
-/* ==============================
-   SOBRE
-============================== */
+/* SOBRE */
+#sobre {
+  background-color: #ede0d4;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -947,40 +905,24 @@ button {
   color: rgba(171, 130, 130, .76);
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 24px;
+.crefito-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1.5px solid rgba(135, 207, 195, .6);
+  border-radius: 50px;
+  background: rgba(135, 207, 195, .15);
+  color: #fff;
+  font-size: .9rem;
+  letter-spacing: .5px;
 }
 
-.stat-card {
-  background: rgba(239, 235, 235, .7);
-  border-radius: 14px;
-  padding: 16px;
-  transition: transform .2s;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
-}
-
-.stat-card i {
-  color: var(--teal);
-  width: 18px;
-  height: 18px;
-}
-
-.stat-card strong {
-  display: block;
-  font-size: 1.55rem;
-  margin-top: 8px;
-  color: var(--hero-dark);
-}
-
-.stat-card small {
-  color: var(--beige-dark);
-  font-size: .85rem;
+.crefito-badge strong {
+  color: #87cfc3;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /* ==============================
@@ -993,13 +935,26 @@ button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: #0f1a18;
+  background: #0d0d0d;
+  margin-top: -2px;
 }
 
 .svc-track {
   position: relative;
   flex: 1;
   display: flex;
+}
+
+.svc-track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, #0d0d0d 0%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
 }
 
 .svc-slide {
@@ -1130,10 +1085,6 @@ button {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.svc-chip i {
-  font-size: .9rem;
-}
-
 .svc-panel h2 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -1237,7 +1188,7 @@ button {
   font-family: 'DM Sans', sans-serif;
 }
 
-.svc-bar-item:last-child {
+.svc-bar-item:last-of-type {
   border-right: none;
 }
 
@@ -1283,10 +1234,6 @@ button {
 .svc-bar-item.active .svc-bar-icon,
 .svc-bar-item:hover .svc-bar-icon {
   transform: scale(1.1);
-}
-
-.svc-bar-text {
-  min-width: 0;
 }
 
 .svc-bar-title {
@@ -1338,7 +1285,7 @@ button {
   transform: scale(1.1);
 }
 
-/* BARRA DE PROGRESSO DO SLIDE */
+/* PROGRESSO */
 .svc-progress {
   position: absolute;
   bottom: 0;
@@ -1351,9 +1298,11 @@ button {
   opacity: .7;
 }
 
-/* ==============================
-   GALERIA
-============================== */
+/* GALERIA */
+#galeria {
+  background-color: #d6e8e4;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1401,9 +1350,11 @@ button {
   opacity: 1;
 }
 
-/* ==============================
-   CONTATO
-============================== */
+/* CONTATO */
+#contato {
+  background-color: #e8d8d8;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -1472,14 +1423,7 @@ button {
   color: var(--teal-darker);
 }
 
-.contact-map-link i {
-  width: 16px;
-  height: 16px;
-}
-
-/* ==============================
-   FOOTER
-============================== */
+/* FOOTER */
 .site-footer {
   background: linear-gradient(135deg, #221717 0%, #2b1e1e 50%, #1d2b27 100%);
   color: #fff;
@@ -1490,11 +1434,6 @@ button {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 24px;
-}
-
-.site-footer p {
-  color: rgba(255, 255, 255, .82);
-  line-height: 1.7;
 }
 
 .site-footer h4 {
@@ -1569,9 +1508,7 @@ button {
   background: rgba(255, 255, 255, .22);
 }
 
-/* ==============================
-   MODAIS
-============================== */
+/* MODAIS */
 .modal {
   position: fixed;
   inset: 0;
@@ -1696,9 +1633,7 @@ button {
   line-height: 1;
 }
 
-/* ==============================
-   REVEAL AO SCROLL
-============================== */
+/* REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -1708,6 +1643,10 @@ button {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.bs-logo-text {
+  font-family: 'Great Vibes', cursive;
 }
 
 /* ==============================
@@ -1735,44 +1674,196 @@ button {
   .svc-cta {
     display: none !important;
   }
+
   .svc-section {
-    height: auto;
-    min-height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .svc-track {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
   }
 
   .svc-slide {
-    grid-template-columns: 1fr;
-    grid-template-rows: 45vh auto;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .svc-img {
+    width: 100%;
+    flex: 0 0 45% !important;
+    min-height: 45% !important;
+  }
+
+  .svc-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center;
   }
 
   .svc-img-overlay {
     background: linear-gradient(0deg, var(--panel-color, #1a1212) 0%, transparent 60%);
   }
 
+  .svc-slide:nth-child(2) .svc-img img {
+    object-position: center 30% !important;
+  }
+
+  .svc-slide:nth-child(3) .svc-img img {
+    object-position: center 15% !important;
+  }
+
   .svc-panel {
-    padding: 32px 24px 40px;
+    flex: 1;
+    padding: 12px 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    position: relative;
   }
 
   .svc-num {
     font-size: 5rem;
-    right: 20px;
-    bottom: -10px;
+    line-height: 1;
+    opacity: .05;
+    position: absolute;
+    bottom: 8px;
+    right: 14px;
+    top: auto;
+    pointer-events: none;
+  }
+
+  .svc-chip {
+    font-size: .65rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    align-self: flex-start;
+  }
+
+  .svc-panel h2 {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .svc-panel h2 span {
+    font-size: .85em;
+  }
+
+  .svc-panel>p {
+    font-size: .72rem;
+    line-height: 1.45;
+    margin: 0;
+    opacity: .85;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .svc-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+  }
+
+  .svc-bullet {
+    font-size: .70rem;
+    gap: 8px;
+    align-items: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .svc-bullet-dot {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
   }
 
   .svc-bar {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, .07);
     height: auto;
-    flex-wrap: wrap;
+  }
+
+  .svc-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .svc-bar-item {
-    flex: 0 0 50%;
-    border-bottom: 1px solid rgba(255, 255, 255, .06);
-    padding: 14px 16px;
+    flex: 1 0 auto;
+    min-width: 80px;
+    max-width: 110px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 8px 12px;
+    gap: 4px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, .05);
+    border-bottom: none;
   }
 
-  .svc-bar-item:nth-child(3),
-  .svc-bar-item:nth-child(4) {
-    border-bottom: none;
+  .svc-bar-item:last-of-type {
+    border-right: none;
+  }
+
+  .svc-bar-icon {
+    width: 32px;
+    height: 32px;
+    font-size: .9rem;
+    border-radius: 8px;
+  }
+
+  .svc-bar-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .svc-bar-title {
+    font-size: .6rem;
+    font-weight: 600;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .svc-bar-sub {
+    display: none;
+  }
+
+  .svc-progress {
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0;
   }
 
   .svc-arrows {
@@ -1796,17 +1887,6 @@ button {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .hero-logo-bg {
-    right: 10%;
-    bottom: 5%;
-    width: 70vw;
-    opacity: 0;
-  }
-
-  .app-ready .hero-logo-bg {
-    opacity: .07;
-  }
 }
 
 @media (max-width: 470px) {
@@ -1815,247 +1895,27 @@ button {
   }
 }
 
-.bs-logo-text {
-  font-family: 'Great Vibes', cursive;
-}
-
-/* =====================================================
-   CARROSSEL DE SERVIÇOS — ESTILOS MOBILE
-   Cole este bloco no FINAL do seu style.css
-   ===================================================== */
-
-@media (max-width: 768px) {
-
+@media (max-width: 380px) {
   .svc-section {
-    height: 100svh;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    min-height: 580px;
   }
 
-  /* === TRACK / SLIDES === */
-  .svc-track {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .svc-slide {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    /* sem scroll interno */
-  }
-
-  /* === IMAGEM (topo) — ocupa 40% da altura do track === */
   .svc-img {
-    width: 100%;
-    flex: 0 0 45% !important;
-    min-height: 45% !important;
-    /* 40% da altura do track, sem crescer nem encolher */
+    flex: 0 0 42% !important;
+    min-height: 42% !important;
   }
 
-  .svc-img img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center;
-  }
-
-  /* === PAINEL DE CONTEÚDO (baixo) — ocupa os 60% restantes === */
   .svc-panel {
-    flex: 1;
-    padding: 18px 20px 14px;
-    overflow: hidden;
-    /* sem scroll — conteúdo se ajusta ao espaço */
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    /* centraliza verticalmente no espaço disponível */
-    position: relative;
-  }
-
-  /* número decorativo — fora do fluxo, não afeta layout */
-  .svc-num {
-    font-size: 5rem;
-    line-height: 1;
-    opacity: 0.05;
-    position: absolute;
-    bottom: 8px;
-    right: 14px;
-    top: auto;
-    pointer-events: none;
-  }
-
-  .svc-chip {
-    font-size: 0.65rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-    align-self: flex-start;
+    padding: 10px 12px;
+    gap: 5px;
   }
 
   .svc-panel h2 {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    line-height: 1.15;
-    margin: 0;
-  }
-
-  .svc-panel h2 span {
-    font-size: 0.85em;
+    font-size: 1rem;
   }
 
   .svc-panel>p {
-    font-size: 0.82rem;
-    line-height: 1.55;
-    margin: 0;
-    opacity: 0.85;
-  }
-
-  /* === BULLETS === */
-  .svc-bullets {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin: 0;
-  }
-
-  .svc-bullet {
-    font-size: 0.78rem;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .svc-bullet-dot {
-    width: 6px;
-    height: 6px;
-    flex-shrink: 0;
-  }
-
-  /* === BOTÃO CTA === */
-  .svc-cta {
-    margin-top: 4px;
-    padding: 10px 20px;
-    font-size: 0.82rem;
-    align-self: flex-start;
-    border-radius: 50px;
-  }
-
-  /* === BARRA INFERIOR === */
-  .svc-bar {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 0;
-    padding: 0;
-    background: #0d0d0d;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    height: auto;
-  }
-
-  .svc-bar::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* === ITEM DA BARRA === */
-  .svc-bar-item {
-    flex: 1 0 auto;
-    min-width: 80px;
-    max-width: 110px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 8px 12px;
-    gap: 4px;
-    text-align: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .svc-bar-item:last-of-type {
-    border-right: none;
-  }
-
-  /* Ícone */
-  .svc-bar-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  /* Texto */
-  .svc-bar-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1px;
-  }
-
-  .svc-bar-title {
-    font-size: 0.6rem;
-    font-weight: 600;
-    white-space: normal;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .svc-bar-sub {
-    display: none;
-    /* esconde o subtítulo no mobile para economizar espaço */
-  }
-
-  /* Barra de progresso (fica embaixo do item) */
-  .svc-progress {
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    border-radius: 0;
-  }
-
-  /* === SETAS === */
-  .svc-arrows {
-    display: none;
-    /* swipe substitui as setas no mobile */
-  }
-
-  /* Slide 2 — Terapia Manual: puxa imagem para cima */
-  .svc-slide:nth-child(2) .svc-img img {
-    object-position: center 30% !important;
-  }
-  .svc-slide:nth-child(3) .svc-img img {
-    object-position: center 15% !important;}
-}
-
-/* Telas muito pequenas (≤ 380px) */
-@media (max-width: 380px) {
-  .svc-img {
-    max-height: 220px;
-  }
-
-  .svc-panel {
-    padding: 14px 16px 12px;
-    gap: 8px;
-  }
-
-  .svc-panel h2 {
-    font-size: 1.4rem;
+    -webkit-line-clamp: 3;
   }
 
   .svc-bar-item {
@@ -2066,100 +1926,16 @@ button {
   .svc-bar-icon {
     width: 28px;
     height: 28px;
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
 
   .svc-bar-title {
-    font-size: 0.55rem;
+    font-size: .55rem;
   }
 }
 
-/* =====================================================
-   TRANSIÇÃO GRADIENTE: HERO → CARROSSEL
-   Cole no FINAL do style.css
-   ===================================================== */
-
-/* Pseudo-elemento que "derrama" o hero para baixo */
-.hero-section {
-  position: relative;
-}
-
-.hero-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 160px;
-  background: linear-gradient(to bottom,
-      transparent 0%,
-      rgba(10, 10, 10, 0.6) 60%,
-      #0d0d0d 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* Carrossel começa sem espaço, continuando o gradiente */
-.svc-section {
-  margin-top: -2px;
-  /* elimina qualquer gap entre as seções */
-  background: #0d0d0d;
-  /* cor de base que combina com o fim do gradiente */
-}
-
-/* Suaviza a entrada do primeiro slide */
-.svc-track::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, #0d0d0d 0%, transparent 100%);
-  z-index: 5;
-  pointer-events: none;
-}
-
-/* =====================================================
-   FUNDOS DAS SEÇÕES — Opção C
-   Cole no FINAL do style.css
-   ===================================================== */
-
-/* Seção Sobre → bege quente */
-#sobre {
-  background-color: #ede0d4;
-}
-
-/* Seção Galeria → verde clarinho */
-#galeria {
-  background-color: #d6e8e4;
-}
-
-#contato {
-  background-color: #e8d8d8;
-}
-/* TABLET — slide 2 Terapia Manual */
 @media (min-width: 769px) and (max-width: 1024px) {
   .svc-slide:nth-child(2) .svc-img img {
     object-position: center 20% !important;
-  }}
-.crefito-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1.5px solid rgba(135, 207, 195, 0.6);
-  border-radius: 50px;
-  background: rgba(135, 207, 195, 0.15);
-  color: #fff;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  }
 }
-
-.crefito-badge strong {
-  color: #87cfc3;
-  font-weight: 700;
-  font-size: 1rem;
-}
-  
