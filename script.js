@@ -1,14 +1,19 @@
 const galleryImages = [
   { src: 'assets/local1.jpeg',    alt: 'Estúdio de pilates moderno e elegante' },
   { src: 'assets/local2.jpeg',    alt: 'Exercício de pilates no solo' },
-  { src: 'assets/exercicio1.jpeg',alt: 'Pilates reformer em detalhe' },
+ { src: 'assets/exercicio1.jpeg', alt: 'Pilates reformer em detalhe',  objPos: 'center top' },
   { src: 'assets/exercicio2.jpeg',alt: 'Sessão de alongamento' },
-  { src: 'assets/galeria.jpeg',   alt: 'Clínica de fisioterapia' },
+  { src: 'assets/galeria.jpeg',    alt: 'Clínica de fisioterapia',      objPos: 'center 35%' },
   { src: 'assets/exercicio4.jpeg',alt: 'Pilates com bola' },
   { src: 'assets/exercicio5.jpeg',alt: 'Pilates com bola' },
   { src: 'assets/exercicio6.jpeg',alt: 'Pilates com bola' },
   { src: 'assets/exercicio7.jpeg',alt: 'Pilates com bola' },
 ];
+document.querySelectorAll('.gallery-grid .gallery-item img').forEach((img, i) => {
+  if (galleryImages[i]?.objPos) {
+    img.style.objectPosition = galleryImages[i].objPos;
+  }
+});
 
 /* ==============================
    ESTADO GLOBAL
