@@ -1732,9 +1732,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  .svc-cta {
-    display: none !important;
-  }
+
   .svc-section {
     height: auto;
     min-height: 100vh;
