@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bárbara Santos | Fisioterapia & Pilates</title>
+  <meta name="description" content="Fisioterapia especializada e Pilates com Dra. Bárbara Santos em Florianópolis, SC." />
+  <meta property="og:image" content="./og-image.png" />
+  <link rel="icon" href="./favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <p>Bárbara Santos</p>
+    </div>
+  </div>
+
+  <!-- BARRA DE PROGRESSO -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- HEADER -->
+  <header id="siteHeader" class="site-header">
+    <div class="container header-inner">
+      <button class="brand" onclick="scrollToId('inicio')" aria-label="Ir para início">
+        <div class="brand-logo-img">
+          <img src="assets/logomaior1.png" alt="Bárbara Santos Fisioterapia & Pilates" />
+        </div>
+      </button>
+      <nav class="desktop-nav">
+        <button onclick="scrollToId('inicio')">Início</button>
+        <button onclick="scrollToId('sobre')">Sobre</button>
+        <button onclick="scrollToId('servicos')">Serviços</button>
+        <button onclick="scrollToId('galeria')">Galeria</button>
+        <button class="btn btn-solid" onclick="openContact()">Contato</button>
+      </nav>
+      <button id="menuBtn" class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- OVERLAY + DRAWER MOBILE -->
+  <div id="mobileOverlay" class="mobile-overlay" onclick="closeMenu()"></div>
+  <nav id="mobileNav" class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <button class="mobile-nav-close" onclick="closeMenu()" aria-label="Fechar menu">×</button>
+      <div class="mobile-nav-logo bs-logo-text">BS</div>
+      <div class="mobile-nav-links">
+        <button onclick="scrollToId('inicio'); closeMenu()"><span>01</span> Início</button>
+        <button onclick="scrollToId('sobre'); closeMenu()"><span>02</span> Sobre</button>
+        <button onclick="scrollToId('servicos'); closeMenu()"><span>03</span> Serviços</button>
+        <button onclick="scrollToId('galeria'); closeMenu()"><span>04</span> Galeria</button>
+      </div>
+      <button class="mobile-nav-cta btn btn-gradient" onclick="openContact(); closeMenu()">
+        <i class="fa-brands fa-whatsapp"></i> Entrar em Contato
+      </button>
+      <div class="mobile-nav-socials">
+        <a href="https://instagram.com/pilates.barbarasantos" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5548991981575" target="_blank" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="app" class="hidden-on-load">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-logo-bg bs-logo-text" aria-hidden="true">BS</div>
+      <div class="hero-deco deco-a"></div>
+      <div class="hero-deco deco-b"></div>
+      <div class="hero-deco deco-c"></div>
+      <div class="container hero-content">
+        <span class="chip hero-chip">Fisioterapia & Pilates</span>
+        <h1>Corpo em movimento, <span> vida em equilíbrio!</span></h1>
+        <p>Tratamentos personalizados com Dra. Bárbara Santos para restaurar seu equilíbrio, aliviar dores e conquistar qualidade de vida.</p>
+        <div class="hero-actions">
+          <button class="btn btn-solid" onclick="scrollToId('servicos')">Conheça os Serviços</button>
+          <button class="btn btn-glass" onclick="scrollToId('sobre')">Saiba Mais</button>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator"><span></span></div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section ">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="chip chip-teal">Sobre</span>
+          <h2>Dra. Bárbara Santos</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="assets/barbarahero.jpeg" alt="Dra. Bárbara Santos" />
+          </div>
+          <div class="about-text reveal">
+            <h3>Cuidado personalizado para cada paciente</h3>
+            <p>Fisioterapeuta graduada pela <strong>UDESC</strong>, com Mestrado em Ciências do Movimento Humano pela mesma instituição. Minha trajetória acadêmica e clínica é dedicada a oferecer um cuidado completo, baseado em evidências científicas e no olhar humanizado para cada paciente.</p>
+            <p>Pós-graduada em <strong>Terapia Manual</strong> e <strong>Saúde Pública com foco em Saúde da Família</strong>, e atualmente aprofundando conhecimentos em <strong>Biomecânica Aplicada com ênfase em Patologias e Fortalecimento no Pilates</strong> — unindo ciência e movimento para transformar a sua qualidade de vida.</p>
+            <div class="stats-grid">
+              <article class="stat-card" data-counter="5" data-suffix="+">
+                <i data-lucide="award"></i>
+                <strong data-counter-value>0</strong>
+                <small>Anos de Experiência</small>
+              </article>
+              <article class="stat-card" data-counter="100" data-suffix="+">
+                <i data-lucide="heart"></i>
+                <strong data-counter-value>0</strong>
+                <small>Pacientes Atendidos</small>
+              </article>
+              <article class="stat-card" data-counter="20" data-suffix="+">
+                <i data-lucide="users"></i>
+                <strong data-counter-value>0</strong>
+                <small>Alunos de Pilates</small>
+              </article>
+              <article class="stat-card" data-counter="3" data-suffix="">
+                <i data-lucide="sparkles"></i>
+                <strong data-counter-value>0</strong>
+                <small>Especializações</small>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS — CARROSSEL FULL SCREEN -->
+    <section id="servicos" class="svc-section">
+
+      <div class="svc-track" id="svcTrack">
+
+        <!-- SLIDE 1 — PILATES -->
+        <div class="svc-slide active" style="
+          --panel-color:#0f1e1c;
+          --accent1:rgba(135,207,195,.18);--accent2:rgba(87,158,148,.12);
+          --grad1:#87cfc3;--grad2:#5a9e94;
+          --chip-color:#87cfc3;--chip-bg:rgba(135,207,195,.12);--chip-border:rgba(135,207,195,.3);
+          --cta-shadow:rgba(135,207,195,.4)">
+          <div class="svc-img">
+            <img src="assets/servico-pilates.jpeg" alt="Pilates"/>
+            <div class="svc-img-overlay"></div>
+            <div class="svc-img-overlay2"></div>
+          </div>
+          <div class="svc-panel">
+            <div class="svc-num">01</div>
+            <div class="svc-chip"><i class="fa-solid fa-person-walking-arrow-right"></i> Serviço 01/04</div>
+            <h2>Pilates<br/><span>Solo & Aparelhos</span></h2>
+            <p>O Pilates é um método de treinamento que integra força, controle, respiração e movimento para promover saúde e qualidade de vida. Com exercícios personalizados e realizados de forma segura, melhora o condicionamento físico, o equilíbrio, a mobilidade e a consciência corporal, sendo indicado tanto para quem busca prevenir lesões quanto para quem deseja aliviar dores, reabilitar-se ou aprimorar o desempenho nas atividades do dia a dia.</p>
+            <div class="svc-bullets">
+              <div class="svc-bullet"><div class="svc-bullet-dot"></div>Fortalecimento global, com ênfase no core (abdômen, lombar e pelve).</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot"></div>Melhora da postura, do equilíbrio e da coordenação motora.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot"></div>Aumento da flexibilidade e da mobilidade articular.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot"></div>Prevenção de lesões e auxílio no tratamento de dores musculoesqueléticas.</div>
+            </div>
+            <a href="https://wa.me/5548991981575" class="svc-cta" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação
+            </a>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 — TERAPIA MANUAL -->
+        <div class="svc-slide" style="
+          --panel-color:#1a1015;
+          --accent1:rgba(240,181,182,.18);--accent2:rgba(196,173,143,.12);
+          --grad1:#f0b5b6;--grad2:#e09899;
+          --chip-color:#f0b5b6;--chip-bg:rgba(240,181,182,.12);--chip-border:rgba(240,181,182,.3);
+          --cta-shadow:rgba(240,181,182,.4)">
+          <div class="svc-img">
+            <img src="assets/servico-manual.jpeg" alt="Terapia Manual"/>
+            <div class="svc-img-overlay"></div>
+            <div class="svc-img-overlay2"></div>
+          </div>
+          <div class="svc-panel">
+            <div class="svc-num">02</div>
+            <div class="svc-chip"><i class="fa-solid fa-hand-holding-heart"></i> Serviço 02/04</div>
+            <h2>Terapia<br/><span>Manual</span></h2>
+            <p>conjunto de técnicas especializadas utilizadas para avaliar e tratar disfunções do sistema musculoesquelético. Por meio de mobilizações, manipulações e outras técnicas específicas, contribui para o alívio da dor, recuperação dos movimentos e melhora da função, proporcionando um tratamento individualizado e baseado nas necessidades de cada paciente.s</p>
+            <div class="svc-bullets">
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#f0b5b6;box-shadow:0 0 8px #f0b5b6"></div>Alívio da dor e redução da tensão muscular.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#f0b5b6;box-shadow:0 0 8px #f0b5b6"></div>Recuperação da mobilidade e da amplitude de movimento.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#f0b5b6;box-shadow:0 0 8px #f0b5b6"></div>Melhora da função musculoesquelética e do desempenho nas atividades diárias.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#f0b5b6;box-shadow:0 0 8px #f0b5b6"></div>Tratamento personalizado, com foco na causa da disfunção e na prevenção de novas lesões.</div>
+            </div>
+            <a href="https://wa.me/5548991981575" class="svc-cta" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação
+            </a>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 — ESPORTIVA -->
+        <div class="svc-slide" style="
+          --panel-color:#0f1a1e;
+          --accent1:rgba(135,207,195,.15);--accent2:rgba(74,142,132,.1);
+          --grad1:#6ecfc2;--grad2:#3d8a80;
+          --chip-color:#6ecfc2;--chip-bg:rgba(110,207,194,.12);--chip-border:rgba(110,207,194,.3);
+          --cta-shadow:rgba(110,207,194,.4)">
+          <div class="svc-img">
+            <img src="assets/servico-esportiva.jpeg" alt="Fisioterapia Esportiva"/>
+            <div class="svc-img-overlay"></div>
+            <div class="svc-img-overlay2"></div>
+          </div>
+          <div class="svc-panel">
+            <div class="svc-num">03</div>
+            <div class="svc-chip"><i class="fa-solid fa-bolt"></i> Serviço 03/04</div>
+            <h2>Fisioterapia<br/><span>Esportiva</span></h2>
+            <p>Voltada à prevenção, avaliação, tratamento e reabilitação de lesões relacionadas à prática esportiva. Com atendimento individualizado, utiliza recursos e técnicas baseadas em evidências para promover uma recuperação segura, otimizar o desempenho físico e proporcionar um retorno ao esporte com confiança e menor risco de novas lesões.</p>
+            <div class="svc-bullets">
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#6ecfc2;box-shadow:0 0 8px #6ecfc2"></div>Prevenção de lesões e melhora do desempenho esportivo.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#6ecfc2;box-shadow:0 0 8px #6ecfc2"></div>Reabilitação segura com retorno gradual ao esporte.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#6ecfc2;box-shadow:0 0 8px #6ecfc2"></div>Tratamento individualizado, de  acordo com a modalidade e os objetivos do atleta.</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#6ecfc2;box-shadow:0 0 8px #6ecfc2"></div>Recuperação da força, mobilidade e funcionalidade, reduzindo o risco de recidivas.</div>
+            </div>
+            <a href="https://wa.me/5548991981575" class="svc-cta" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação
+            </a>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 — TRAUMATO -->
+        <div class="svc-slide" style="
+          --panel-color:#1a1410;
+          --accent1:rgba(196,173,143,.18);--accent2:rgba(237,220,202,.1);
+          --grad1:#c4ad8f;--grad2:#a08a6e;
+          --chip-color:#c4ad8f;--chip-bg:rgba(196,173,143,.12);--chip-border:rgba(196,173,143,.3);
+          --cta-shadow:rgba(196,173,143,.4)">
+          <div class="svc-img">
+            <img src="assets/servico-postural.jpeg" alt="Traumato-Ortopédica"/>
+            <div class="svc-img-overlay"></div>
+            <div class="svc-img-overlay2"></div>
+          </div>
+          <div class="svc-panel">
+            <div class="svc-num">04</div>
+            <div class="svc-chip"><i class="fa-solid fa-bone"></i> Serviço 04/04</div>
+            <h2>Traumato<br/><span>Ortopédica</span></h2>
+            <p>Conjunto de técnicas aplicadas para reduzir a dor, melhorar a mobilidade e otimizar a função musculoesquelética. O tratamento é individualizado, proporcionando mais conforto, movimento e qualidade de vida.</p>
+            <div class="svc-bullets">
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#c4ad8f;box-shadow:0 0 8px #c4ad8f"></div>Lesões ligamentares e tendinosas</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#c4ad8f;box-shadow:0 0 8px #c4ad8f"></div>Pós-operatório ortopédico</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#c4ad8f;box-shadow:0 0 8px #c4ad8f"></div>Dores crônicas musculoesqueléticas</div>
+              <div class="svc-bullet"><div class="svc-bullet-dot" style="background:#c4ad8f;box-shadow:0 0 8px #c4ad8f"></div>Reabilitação e prevenção integradas</div>
+            </div>
+            <a href="https://wa.me/5548991981575" class="svc-cta" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Avaliação
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /svc-track -->
+
+      <!-- BARRA INFERIOR -->
+      <div class="svc-bar" id="svcBar">
+        <button class="svc-bar-item active" onclick="goToSlide(0)" style="--bar-color:#87cfc3;--bar-bg:rgba(135,207,195,.12)">
+          <div class="svc-bar-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></div>
+          <div class="svc-bar-text">
+            <div class="svc-bar-title">Pilates</div>
+            <div class="svc-bar-sub">Solo & Aparelhos</div>
+          </div>
+          <div class="svc-progress" id="prog0"></div>
+        </button>
+        <button class="svc-bar-item" onclick="goToSlide(1)" style="--bar-color:#f0b5b6;--bar-bg:rgba(240,181,182,.12)">
+          <div class="svc-bar-icon" style="color:#f0b5b6;background:rgba(240,181,182,.12)"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <div class="svc-bar-text">
+            <div class="svc-bar-title">Terapia Manual</div>
+            <div class="svc-bar-sub">Reduzir dor e + movimento</div>
+          </div>
+          <div class="svc-progress" id="prog1"></div>
+        </button>
+        <button class="svc-bar-item" onclick="goToSlide(2)" style="--bar-color:#6ecfc2;--bar-bg:rgba(110,207,194,.12)">
+          <div class="svc-bar-icon" style="color:#6ecfc2;background:rgba(110,207,194,.12)"><i class="fa-solid fa-bolt"></i></div>
+          <div class="svc-bar-text">
+            <div class="svc-bar-title">Fisioterapia Esportiva</div>
+            <div class="svc-bar-sub">Prevenção de lesões</div>
+          </div>
+          <div class="svc-progress" id="prog2"></div>
+        </button>
+        <button class="svc-bar-item" onclick="goToSlide(3)" style="--bar-color:#c4ad8f;--bar-bg:rgba(196,173,143,.12)">
+          <div class="svc-bar-icon" style="color:#c4ad8f;background:rgba(196,173,143,.12)"><i class="fa-solid fa-bone"></i></div>
+          <div class="svc-bar-text">
+            <div class="svc-bar-title">Traumato-Ortopédica</div>
+            <div class="svc-bar-sub">Reabilitação e Prevenção</div>
+          </div>
+          <div class="svc-progress" id="prog3"></div>
+        </button>
+        <div class="svc-arrows">
+          <button class="svc-arrow" onclick="prevSlide()">&#8592;</button>
+          <button class="svc-arrow" onclick="nextSlide()">&#8594;</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="chip chip-sand">Galeria</span>
+          <h2>Nosso Espaço</h2>
+          <p>Conheça nosso ambiente preparado para o seu conforto e bem-estar</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" onclick="openLightbox(0)"><img src="assets/local1.jpeg" alt="Estúdio de pilates" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(1)"><img src="assets/local2.jpeg" alt="Exercício de pilates no solo" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(2)"><img src="assets/exercicio1.jpeg" alt="Pilates reformer" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(3)"><img src="assets/exercicio2.jpeg" alt="Alongamento" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(4)"><img src="assets/galeria.jpeg" alt="Clínica de fisioterapia" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(5)"><img src="assets/exercicio4.jpeg" alt="Pilates com bola" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(6)"><img src="assets/exercicio5.jpeg" alt="Pilates com bola" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(7)"><img src="assets/exercicio6.jpeg" alt="Pilates com bola" /><span>Ver foto</span></button>
+          <button class="gallery-item reveal" onclick="openLightbox(8)"><img src="assets/exercicio7.jpeg" alt="Pilates com bola" /><span>Ver foto</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section section-gradient">
+      <div class="container">
+        <div class="section-title-wrap reveal">
+          <span class="chip chip-teal">Contato</span>
+          <h2>Vamos conversar?</h2>
+          <p>Entre em contato para agendar sua avaliação ou tirar suas dúvidas</p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="https://wa.me/5548991981575" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp" style="color:#87cfc3"></i>
+            <strong>WhatsApp</strong>
+            <small>Agende sua consulta</small>
+          </a>
+          <a class="contact-card reveal" href="https://instagram.com/pilates.barbarasantos" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram" style="color:#f0b5b6; font-size:20px;"></i>
+            <strong>Instagram</strong>
+            <small>@pilates.barbarasantos</small>
+          </a>
+          <a class="contact-card reveal" href="/cdn-cgi/l/email-protection#f2829b9e93869781dc9093809093809381939c869d81b2959f939b9edc919d9f">
+            <i data-lucide="mail" style="color:#c4ad8f"></i>
+            <strong>E-mail</strong>
+            <small><span class="__cf_email__" data-cfemail="eb9b82878a9f8e98c5898a99898a998a988a859f8498ab8c868a8287c5888486">[email&#160;protected]</span></small>
+          </a>
+          <a class="contact-card reveal" href="https://maps.app.goo.gl/swz2LsGefTYD7Eee7" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="map-pin" style="color:#ab8282"></i>
+            <strong>Localização</strong>
+            <small>R. Santos Saraiva, 1180 - Estreito, Florianópolis - SC, 88070-101</small>
+          </a>
+        </div>
+        <div class="contact-map reveal">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.9237816605846!2d-48.58568942362474!3d-27.59589252209644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952737c39a58fbe7%3A0xede7029838f1603e!2sFarm%C3%A1cia%20Pre%C3%A7o%20Popular!5e0!3m2!1spt-BR!2sbr!4v1782505021151!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <a class="contact-map-link" href="https://maps.app.goo.gl/swz2LsGefTYD7Eee7" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="map-pin"></i> Ver no Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="footer-logo-round">
+            <img src="assets/logoredondo.png" alt="Bárbara Santos Fisioterapia & Pilates" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <button onclick="scrollToId('inicio')">Início</button>
+        <button onclick="scrollToId('sobre')">Sobre</button>
+        <button onclick="scrollToId('servicos')">Serviços</button>
+        <button onclick="scrollToId('galeria')">Galeria</button>
+        <button onclick="openContact()">Contato</button>
+      </div>
+      <div>
+        <h4>Redes Sociais</h4>
+        <div class="socials">
+          <a href="https://instagram.com/pilates.barbarasantos" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" style="color:#fff;"></i>
+          </a>
+          <a href="https://wa.me/5548991981575" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp" style="color:#fff;"></i>
+          </a>
+          <a href="/cdn-cgi/l/email-protection#67170e0b06130214490506150506150614060913081427000a060e0b4904080a" aria-label="E-mail">
+            <i data-lucide="mail" style="color:#fff;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CONTATO -->
+  <div id="contactModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeContact()"></div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContact()" aria-label="Fechar">×</button>
+      <h3>Entre em Contato</h3>
+      <p>Escolha a melhor forma de falar comigo</p>
+      <div class="modal-actions">
+        <a href="https://wa.me/5548991981575" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="message-circle"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/pilates.barbarasantos" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="/cdn-cgi/l/email-protection#34445d58554051471a5655465655465547555a405b47745359555d581a575b59">
+          <i data-lucide="mail"></i> E-mail
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL LIGHTBOX -->
+  <div id="galleryModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeLightbox()"></div>
+    <div class="lightbox-box">
+      <button class="lightbox-nav" onclick="navigateLightbox(-1)" aria-label="Anterior">❮</button>
+      <img id="lightboxImage" src="" alt="" />
+      <button class="lightbox-nav" onclick="navigateLightbox(1)" aria-label="Próxima">❯</button>
+      <button class="modal-close lightbox-close" onclick="closeLightbox()" aria-label="Fechar">×</button>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
