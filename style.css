@@ -2140,4 +2140,23 @@ button {
   .svc-slide:nth-child(2) .svc-img img {
     object-position: center 20% !important;
   }}
+.crefito-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1.5px solid rgba(135, 207, 195, 0.6);
+  border-radius: 50px;
+  background: rgba(135, 207, 195, 0.15);
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.crefito-badge strong {
+  color: #87cfc3;
+  font-weight: 700;
+  font-size: 1rem;
+}
   
