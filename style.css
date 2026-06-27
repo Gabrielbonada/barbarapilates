@@ -2034,7 +2034,7 @@ button {
 
   /* Slide 2 — Terapia Manual: puxa imagem para cima */
   .svc-slide:nth-child(2) .svc-img img {
-    object-position: center top !important;
+    object-position: center 30% !important;
   }
   .svc-slide:nth-child(3) .svc-img img {
     object-position: center 15% !important;}
@@ -2135,3 +2135,9 @@ button {
 #contato {
   background-color: #e8d8d8;
 }
+/* TABLET — slide 2 Terapia Manual */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .svc-slide:nth-child(2) .svc-img img {
+    object-position: center 20% !important;
+  }}
+  
