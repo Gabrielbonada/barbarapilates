@@ -171,7 +171,7 @@ function setupReveal() {
    CARROSSEL DE SERVIÇOS
 ============================== */
 var SVC_TOTAL    = 4;
-var SVC_INTERVAL = 6000;
+var SVC_INTERVAL = 12000;
 var svcCurrent   = 0;
 var svcProgress  = 0;
 var svcProgTimer = null;
